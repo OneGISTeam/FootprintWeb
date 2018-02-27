@@ -50,6 +50,36 @@
         <script src="plugins/frozenUI/js/frozen.js"></script>
         <script>
         
+        	function showPos(value){
+        		var longitude = value.coords.longitude;
+        		var latitude = value.coords.latitude;
+        		alert(longitude + "," + latitude);
+        	}
+        	
+        	function handleError(value){
+        		switch (value.code){
+        			case 1:
+        				alert("位置服务被拒绝");break;
+        			case 2:
+        				alert("暂时获取不到位置信息");break;
+        			case 3:
+        				alert("获取信息超时");break;
+        			case 4:
+        				alert("未知错误");break;
+        		}
+        	}
+        	
+        	(function getLocation(){
+        		if(navigator.geolocation){
+        			navigator.geolocation.getCurrentPosition(showPos, handleError, {
+        				enableHighAccuracy: true,
+        				maximumAge: 1000
+        			});
+        		}else{
+        			alert("您的浏览器不支持使用HTML5来获取地理位置服务");
+        		}
+        	})();
+        
         </script>
     </body>
 </html>
