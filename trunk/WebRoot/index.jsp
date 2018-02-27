@@ -1,26 +1,61 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'index.jsp' starting page</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-  </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>FrozenUI Demo</title>
+        <link rel="stylesheet" href="plugins/frozenUI/css/frozen.css">
+    </head>
+    <body>
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1>选项卡 tab</h1><button class="ui-btn">回首页</button>
+        </header>
+        <footer class="ui-footer ui-footer-btn">
+            <ul class="ui-tiled ui-border-t">
+                <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
+                <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
+                <li data-href="js.html"><div>JS插件</div></li>
+            </ul>
+        </footer>
+        <section class="ui-container">
+            <section id="tab">
+            	<div class="demo-item">
+            		<p class="demo-desc">标签栏</p>
+            		<div class="demo-block">
+            			<div class="ui-tab">
+            			    <ul class="ui-tab-nav ui-border-b">
+            			        <li class="current">热门推荐</li>
+            			        <li>全部表情</li>
+            			        <li>表情</li>
+            			    </ul>
+            			    <ul class="ui-tab-content" style="width:300%">
+            			        <li>内容1</li>
+            			        <li>内容2</li>
+            			        <li>内容3</li>
+            			    </ul>
+            			</div>
+            		</div>
+            		<script class="demo-script">
+            		
+                    </script>
+            	</div>
+            </section>
+        </section>
+        <script src="plugins/frozenUI/lib/zepto.min.js"></script>
+        <script src="plugins/frozenUI/js/frozen.js"></script>
+        <script>
+        (function (){
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab',
+                autoplay: true,
+                interval: 3000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex,toIndex);// from 为当前页，to 为下一页
+            });
+        })();
+        </script>
+    </body>
 </html>
