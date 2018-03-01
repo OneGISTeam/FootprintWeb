@@ -4,7 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{CF9DE7B5-A290-4838-A1BD-4DD369C7E531}" Name="FootprintDatabase" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="FootprintDatabase.pdm"/>
+		<Model Expanded="Yes" ID="{CF9DE7B5-A290-4838-A1BD-4DD369C7E531}" Loaded="No" Name="FootprintDatabase" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="FootprintDatabase.pdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
