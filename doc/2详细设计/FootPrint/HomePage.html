@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" name=" " content="HomePage">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>首页</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/HomePage.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" /></script>
+		<script type="text/javascript" src="js/HomePage.js"></script>
+	
+	</head>
+
+	<body>
+
+		<div data-role="page" id="homepage">
+
+			<div data-role="header">
+				<div data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="HomePage.html" data-icon="home" class="ui-btn-active">动态</a>
+						</li>
+						<li>
+							<a href="EventRecord.html" data-icon="carat-r">记录</a>
+						</li>
+						<li>
+							<a href="EventBrowse.html" data-icon="navigation">浏览</a>
+						</li>
+						<li>
+							<a href="UserInfo.html" data-icon="user">用户</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="content">
+				<div class="slideShow">
+					<!--图片布局开始-->
+					<ul>
+						<li>
+							<a href="#"><img src="img/slide/1.jpg" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="img/slide/2.jpg" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="img/slide/3.jpg" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="img/slide/4.jpg" /></a>
+						</li>
+					</ul>
+					<!--图片布局结束-->
+
+					<!--按钮布局开始-->
+					<div class="showNav">
+						<span class="active">1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+					</div>
+					<!--按钮布局结束-->
+				</div>
+
+				<div class="searchTrip">
+					<form id="searchForm" action="" method="get">
+						<div class="ui-field-contain">
+							<table class="searchTable">
+								<tbody>
+									<tr>
+										<td>
+											<label id="search_label" for="search_trip" class="ui-hidden-accessible">搜索用户足迹</label>
+											<input type="search" name=" " id="search_trip" maxlength="20" value="" placeholder="搜索用户足迹..." />
+										</td>
+										<td>
+											<input type="button" data-icon="search" value="搜索">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+
+				<div class="ListSection" id="tripList">
+					<ul data-role="listview">
+						<li>
+							<table>
+								<tbody>
+									<tr>
+										<td width="300px">
+											<h3><a class="trip-title" href="/trip/1579899/">2018-03-28-自驾 </a></h3></p>
+											<p>
+												<a href="/userindex/893733/">钱志宏</a>2018-3-28</p>
+											<p>西藏 昌都 八宿县&nbsp; 至&nbsp;西藏 林芝 波密县</p>
+											<p>
+												<a href="/search/trip/driving/1/recommend/time/descent/">自驾车</a>全长148.8公里</p>
+										</td>
+										<td>
+											<a href="/footprint/9252953/">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154039_CZ9ZG.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154143_77S9R.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154232_SMA9T.png-.thumbnail">
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+
+						<li>
+							<table>
+								<tbody>
+									<tr>
+										<td width="300px">
+											<h3><a class="trip-title" href="/trip/1579899/">2018-03-28-自驾 </a></h3></p>
+											<p>
+												<a href="/userindex/893733/">钱志宏</a>2018-3-28</p>
+											<p>西藏 昌都 八宿县&nbsp; 至&nbsp;西藏 林芝 波密县</p>
+											<p>
+												<a href="/search/trip/driving/1/recommend/time/descent/">自驾车</a>全长148.8公里</p>
+										</td>
+										<td>
+											<a href="/footprint/9252953/">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154039_CZ9ZG.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154143_77S9R.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154232_SMA9T.png-.thumbnail">
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+
+						<li>
+							<table>
+								<tbody>
+									<tr>
+										<td width="300px">
+											<h3><a class="trip-title" href="/trip/1579899/">2018-03-28-自驾 </a></h3></p>
+											<p>
+												<a href="/userindex/893733/">钱志宏</a>2018-3-28</p>
+											<p>西藏 昌都 八宿县&nbsp; 至&nbsp;西藏 林芝 波密县</p>
+											<p>
+												<a href="/search/trip/driving/1/recommend/time/descent/">自驾车</a>全长148.8公里</p>
+										</td>
+										<td>
+											<a href="/footprint/9252953/">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154039_CZ9ZG.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154143_77S9R.png-.thumbnail">
+												<img title="未命名" class="photo" alt="未命名" src="http://image.foooooot.com/footprint/2018/03/28/154232_SMA9T.png-.thumbnail">
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" name=" " content="Register">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>注册 FootPrint</title>
+		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js">
+		</script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js" />
+		</script>
+		<style>
+			body {
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div data-role="page" id="register">
+			<div data-role="header">
+				<a href="Login.html"  class="ui-btn ui-icon-back ui-btn-icon-left" data-transition="fade">返回</a>
+				<h1>用户注册</h1>
+			</div>
+
+			<div data-role="content" class="ui-content" align="center">
+
+				<form id="id_form" action=" " method="post">
+					<div class= "ui-field-contain">
+						<input type="text" name="username" id="username" placeholder="用户名/账号" />
+						<input type="password" name="password" id="password" placeholder="密码" />
+						<input type="password" name="repassword" placeholder="确认密码" />
+					    <input type="email"  name="email" id="email" placeholder="邮箱"/>
+					    <input type="submit" data-role = "button" id="btn_submit" value="注  册"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

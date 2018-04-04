@@ -1,0 +1,75 @@
+body {
+				font-size: 18px;
+			}
+			
+			.ui-content {
+				background-image: url(../img/login/24241.jpg);
+				background-size: cover;
+				height: 720px;
+				width: 1280px;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: 0;
+				font-family: "黑体";
+			}
+			
+			h1{
+				/*position:fixed;*/
+				text-align: center;
+			}
+			
+			#footprint {
+				border: none;
+				width: 90px;
+				height: 90px;
+			}
+			
+			img.icon {
+				border: none;
+				width: 30px;
+				height: 30px;
+			}
+			
+			.ui-field-contain {
+				width: 500px;
+			}
+			
+			table {
+				margin-bottom: 25px;
+
+			}
+
+			.bottom {
+				position: relative;
+				top: 20px;
+				font-size: 14px;
+				font-weight: lighter;
+			}
+			
+			.bottom a:link {
+				color: whitesmoke;
+				text-decoration: none;
+			}
+			
+			.bottom a:visited {
+				color: whitesmoke;
+				text-decoration: none;
+			}
+			
+			.bottom a:hover {
+				color: #22AADD;
+				text-decoration: underline;
+			}
+			
+			.bottom a:active {
+				color: #22AADD;
+				text-decoration: underline;
+			}
+			
+			.register {
+				margin-right: 100px;
+			}
+			
+			.lastps {
+				margin-left: 100px;
+			}

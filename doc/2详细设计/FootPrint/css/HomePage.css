@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.slideShow {
+	width: 800px;
+	height: 500px;
+	/*其实就是图片的高度*/
+	border: 1px #eeeeee solid;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+	/*此处需要将溢出框架的图片部分隐藏*/
+}
+
+.slideShow ul {
+	width: 4000px;
+	position: relative;
+	/*此处需注意relative : 对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，如果没有这个属性，图片将不可左右移动*/
+}
+
+.slideShow ul li {
+	float: left;
+	/*让四张图片左浮动，形成并排的横着布局，方便点击按钮时的左移动*/
+	width: 800px;
+}
+
+.slideShow .showNav {
+	/*用绝对定位给数字按钮进行布局*/
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.slideShow .showNav span {
+	cursor: pointer;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #1296db;
+	margin-left: 2px;
+	color: #fff;
+}
+
+.slideShow .showNav .active {
+	background: #13227a;
+}
+
+
+/*.ui-icon-homepage:after {
+				background: url(img/navbar/homepage.png) no-repeat ;
+				background-size: 20px 20px;
+			}
+			
+			.ui-icon-record:after {
+				background: url(img/navbar/record.png) no-repeat;
+				background-size: 20px 20px;
+			}
+			
+			.ui-icon-browse:after {
+				background: url(img/navbar/browse.png) no-repeat;
+				background-size: 20px 20px;
+			}
+			
+			.ui-icon-user:after {
+				background: url(img/navbar/user.png) no-repeat;
+				background-size: 20px 20px;
+			}*/
+
+.searchTrip  {
+	height: 45px;
+	width: 800px;
+	border: "0";
+	margin: 50px auto;
+	position: relative;
+}
+
+#search_trip {
+	width: 670px;
+	height: 45px;
+	border: 0;
+	color: #B5B5B5;
+	font-size: 14px;
+	outline: none;
+}
+
+
+.ListSection{
+	width: 780px;
+	position:relative;
+	margin: 50px auto;
+}
+
+.ListSection .photo{
+	height: 100px;
+	width: 150px;
+	overflow: hidden;
+	position: relative;
+}

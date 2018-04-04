@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" name=" " content="UserInfo">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>用户</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/HomePage.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" /></script>
+		<style>
+			/* right style */
+.m_right{
+	float:right; 
+	overflow:hidden; 
+	position:relative; 
+	width:245px;}
+
+.m_right dt{ 
+	
+	background-color:#EBF4D8; 
+	font-weight:bold; 
+	height:25px; 
+	line-height:25px; 
+	padding-left:5%; 
+	width:95%; }
+	
+.m_right dd{ 
+	
+	padding:5px 3px 5px 4px; 
+	}
+	
+ul.user_list_ul li{
+	    display:inline-block;
+	    /*float:left;*/
+	    height:95px;
+	    margin:0 5px 0 0;
+	    overflow:hidden; 
+	    padding:0; 
+	    text-align:center;
+	    width: 54px;}
+	    
+.boxIncludePic50{ border:1px solid #e0e0e0; height:50px; padding:1px; position: relative; text-align:center; overflow:hidden; width:50px;}
+.boxIncludePic50 img{ float:left;height:50px;width:50px; }
+		</style>
+	
+	</head>
+
+	<body>
+
+		<div data-role="page" data-control-title="我的信息" id="UserInfo">
+
+			<div data-role="header">
+				<div data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="HomePage.html" data-icon="home">动态</a>
+						</li>
+						<li>
+							<a href="EventRecord.html" data-icon="carat-r">记录</a>
+						</li>
+						<li>
+							<a href="EventBrowse.html" data-icon="navigation">浏览</a>
+						</li>
+						<li>
+							<a href="UserInfo.html" data-icon="user" class="ui-btn-active">用户</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="content">
+				<div class="m_right">
+                <dl>
+            <style>
+                        .hot{float:right; margin-right:20px; }
+                        .hot span{font-family:"微软雅黑";}
+                  </style>
+
+	                <dt>我的驴友（0）
+	                	<a class="hot" href="/home/lvlifang/">驴友关系图</a>
+	                </dt>
+                    <dd>
+                        <ul class="user_list_ul">
+	                    	
+                            <li class="prompt_li" style="width:100%;">您还没有驴友</li>
+                            
+                        </ul>
+                        <div class="cleanFix"></div>
+                    </dd>
+                    
+	                <dt>关注谁（0）</dt>
+                    <dd>
+                        <ul class="user_list_ul">
+                            
+                            <!--<li class="prompt_li" style="width:100%;">您还没有添加对别人的关注</li>-->
+                            <li class="userHeaditem">
+                                <div class="boxIncludePic50 HoverElement" tr=".remove">
+                                    <!--<input title="取消对其关注" class="bntDeleteFollowing remove point_delete_btn none " style="border: 1px solid rgb(255, 255, 255); border-image: none; display: none;" type="button" value="" userid="866287" touserid="750693" username="一杯粥的时间">-->
+									<a href="/userindex/750693/">
+                                        <img title="一杯粥的时间" class="ShowUserInfoCard" alt="一杯粥的时间" src="http://image.foooooot.com/avatar/750693/2017/04/27/195946_HC0Q1.png-.avatar.mini" uid="750693" bindInfoCard="true">
+                                    </a>
+                                </div>
+	                            <a title="一杯粥的时间" class="photo" href="/userindex/750693/">一杯粥..</a>
+                            </li>
+                            <li class="userHeaditem">
+                                <div class="boxIncludePic50 HoverElement" tr=".remove">
+                                    <!--<input title="取消对其关注" class="bntDeleteFollowing remove point_delete_btn none " style="border: 1px solid rgb(255, 255, 255); border-image: none; display: none;" type="button" value="" userid="866287" touserid="822910" username="白羊座Aries">-->
+									<a href="/userindex/822910/">
+                                        <img title="白羊座Aries" class="ShowUserInfoCard" alt="白羊座Aries" src="http://image.foooooot.com/avatar/822910/2018/03/11/155939_RK7QS.png-.avatar.mini" uid="822910" bindInfoCard="true">
+                                    </a>
+                                </div>
+	                            <a title="白羊座Aries" class="photo" href="/userindex/822910/">白羊座..</a>
+                            </li>
+                        </ul>
+                        <div class="cleanFix"></div>
+                    </dd>
+                    
+	                <dt>被谁关注（0）</dt>
+                    <dd>
+                        <ul class="user_list_ul">
+                            
+                            <li class="prompt_li" style="width:100%;">您还没有添加对别人的关注</li>
+                            
+                        </ul>
+                        <div class="cleanFix"></div>
+                    </dd>
+                    
+	                <dt>加入的小组（0）</dt>
+                    <dd>
+                        <ul class="user_list_ul">
+                            
+                            <li class="prompt_li" style="width:100%;">您还没有添加对别人的关注</li>
+                            
+                        </ul>
+                        <div class="cleanFix"></div>
+                    </dd>
+                </dl>
+            </div>
+         </div>
+        </div> 
+         
+	</body>
+
+</html>

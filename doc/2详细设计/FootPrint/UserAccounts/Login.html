@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" name=" " content="Login">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>登录 FootPrint</title>
+		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="../css/Login.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js">
+		</script>
+		<script type="text/javascript" src="../js/jquery.mobile-1.4.5.min.js" />
+		</script>
+	</head>
+
+	<body>
+		<div data-role="page" id="login">
+			<div data-role="header" >
+				<h1>登   录 FootPrint</h1>
+			</div>
+
+			<div data-role="content" class="ui-content" align="center">				
+				<img id="footprint" src="../img/login/mark.png" />
+				<form id="id_form" action=" " method="post">
+					<div  class="ui-field-contain">
+						<table>
+							<tbody>
+								<tr>
+									<td width="40">
+										<img class="icon" title="用户" alt="用户" src="../img/login/user-photo.png" />
+									</td>
+									<td width="460" class="tdinput" id="id_username">
+										<input type="text" name="username" id="username" placeholder="用户名/账号" />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="icon" title="密码" alt="密码" src="../img/login/pwd-photo.png" />
+									</td>
+									<td>
+										<input type="password" name="password" id="password" placeholder="密码"  />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<select name="switch" id="switch" data-role="slider">
+							<option value="on">保存</option>
+							<option value="off">不保存</option>
+						</select>
+						<input type="submit" data-role="button" id="btn_submit" value="登     录"/>
+					</div>
+				</form>
+				<div class="bottom">
+					<a class="register" href="Register.html" data-transition="slide">注册账号</a>
+					<a class="lastps" href="ForgetPassword.html" data-transition="slide">忘记密码</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
