@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Mon Apr 09 16:24:43 CST 2018
+genBasicCompId=false
+sessionFactoryName=hibernate.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/FootprintWeb/hibernate.reveng.xml
+configFile=/FootprintWeb/src/hibernate.cfg.xml
+createConfigFile=true

@@ -1,0 +1,12 @@
+.ListSection{
+	width: 95%;
+	position:relative;
+	margin: 50px auto;
+}
+
+.ListSection .photo{
+	height: 100px;
+	width: 150px;
+	overflow: hidden;
+	position: relative;
+}

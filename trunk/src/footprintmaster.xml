@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="masterinfo" namespace="/masterinfo" extends="struts-default">
+		<!-- 超级管理员Dao操作(*)：注册（Register）、注销（Delete） -->
+		<action name="master*" class="actions.master.MasterInfo" method="{1}">
+			<result name="success" type="dispatcher">/success.jsp</result><!-- 注册成功 -->
+			<result name="error" type="dispatcher">/error.jsp</result><!-- 注册失败 -->
+		</action>
+		<!-- 超级管理员登录 -->
+		<action name="login" class="actions.master.MasterInfo" method="login">
+			<result name="success" type="dispatcher">/FootprintMaster/Master/homePage.jsp</result>
+			<result name="error" type="dispatcher">/error.jsp</result>
+		</action>
+	</package>
+	<package name="master" namespace="/master" extends="struts-default">
+		<!-- 获取用户列表 -->
+		<action name="users" class="actions.master.UserManage" method="users">
+			<result name="success" type="dispatcher">/FootprintMaster/Master/userManage.jsp</result>
+		</action>
+	</package>
+</struts>

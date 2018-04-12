@@ -4,9 +4,19 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
 	<constant name="struts.multipart.maxSize" value="5500000000"/>
 	<constant name="struts.devMode" value="true" />
+	<include file="footprintmaster.xml"></include>
+	<include file="footprintuser.xml"></include>
 	<package name="common" namespace="/" extends="struts-default">
-		<action name="enter" class="actions.LoginAction">
-			<result name="userLogin" type="dispatcher">/userLogin.jsp</result>
+		<!-- 系统初始化 -->
+		<action name="enter" class="actions.InitSystem">
+			<result name="userLogin">FootprintUser/UserInfo/userLogin.jsp</result><!-- 用户登录页面 -->
+			<!-- 超级管理员注册页面 -->
+			<result name="masterRegister">FootprintMaster/MasterInfo/masterRegister.jsp</result>
+		</action>
+		<!-- 登录超级管理员页面:*/FootprintWeb/masterLoginPage.action-->
+		<action name="masterLoginPage" class="actions.master.HomePage">
+			<result name="success">/FootprintMaster/MasterInfo/masterLogin.jsp</result>
+			<result name="input">/FootprintMaster/MasterInfo/masterRegister.jsp</result>
 		</action>
 	</package>
 </struts>    

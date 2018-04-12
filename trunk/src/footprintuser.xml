@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="userinfo" namespace="/userinfo" extends="struts-default">
+		<!-- 普通用户Dao操作：注册（Register）、注销（Delete） -->
+		<action name="user*" class="actions.user.UserInfo" method="{1}">
+			<result name="success" type="dispatcher">/success.jsp</result><!-- 操作成功 -->
+			<result name="error" type="dispatcher">/error.jsp</result><!-- 操作失败 -->
+		</action>
+		<!-- 普通用户登录 -->
+		<action name="login" class="actions.user.UserInfo" method="login">
+			<result name="success" type="chain">
+				<param name="actionName">home</param>
+				<param name="namespace">/homepage</param>
+			</result>
+			<result name="error" type="dispatcher">/error.jsp</result>
+		</action>
+	</package>
+	
+	<package name="homepage" namespace="/homepage" extends="struts-default">
+		<!-- 访问用户首页 -->
+		<action name="home" class="actions.user.HomePage">
+			<result name="success" type="dispatcher">/FootprintUser/HomePage/homePage.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,142 @@
+package hibernate;
+
+import java.util.List;
+import java.util.Set;
+import org.hibernate.LockOptions;
+import org.hibernate.Query;
+import org.hibernate.criterion.Example;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * A data access object (DAO) providing persistence and search support for
+ * Formdatatype entities. Transaction control of the save(), update() and
+ * delete() operations can directly support Spring container-managed
+ * transactions or they can be augmented to handle user-managed Spring
+ * transactions. Each of these methods provides additional information for how
+ * to configure it for the desired type of transaction control.
+ * 
+ * @see hibernate.Formdatatype
+ * @author MyEclipse Persistence Tools
+ */
+public class FormdatatypeDAO extends BaseHibernateDAO {
+	private static final Logger log = LoggerFactory
+			.getLogger(FormdatatypeDAO.class);
+	// property constants
+	public static final String TYPENAME = "typename";
+
+	public void save(Formdatatype transientInstance) {
+		log.debug("saving Formdatatype instance");
+		try {
+			getSession().save(transientInstance);
+			log.debug("save successful");
+		} catch (RuntimeException re) {
+			log.error("save failed", re);
+			throw re;
+		}
+	}
+
+	public void delete(Formdatatype persistentInstance) {
+		log.debug("deleting Formdatatype instance");
+		try {
+			getSession().delete(persistentInstance);
+			log.debug("delete successful");
+		} catch (RuntimeException re) {
+			log.error("delete failed", re);
+			throw re;
+		}
+	}
+
+	public Formdatatype findById(java.lang.String id) {
+		log.debug("getting Formdatatype instance with id: " + id);
+		try {
+			Formdatatype instance = (Formdatatype) getSession().get(
+					"hibernate.Formdatatype", id);
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+
+	public List findByExample(Formdatatype instance) {
+		log.debug("finding Formdatatype instance by example");
+		try {
+			List results = getSession()
+					.createCriteria("hibernate.Formdatatype")
+					.add(Example.create(instance)).list();
+			log.debug("find by example successful, result size: "
+					+ results.size());
+			return results;
+		} catch (RuntimeException re) {
+			log.error("find by example failed", re);
+			throw re;
+		}
+	}
+
+	public List findByProperty(String propertyName, Object value) {
+		log.debug("finding Formdatatype instance with property: "
+				+ propertyName + ", value: " + value);
+		try {
+			String queryString = "from Formdatatype as model where model."
+					+ propertyName + "= ?";
+			Query queryObject = getSession().createQuery(queryString);
+			queryObject.setParameter(0, value);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+
+	public List findByTypename(Object typename) {
+		return findByProperty(TYPENAME, typename);
+	}
+
+	public List findAll() {
+		log.debug("finding all Formdatatype instances");
+		try {
+			String queryString = "from Formdatatype";
+			Query queryObject = getSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+
+	public Formdatatype merge(Formdatatype detachedInstance) {
+		log.debug("merging Formdatatype instance");
+		try {
+			Formdatatype result = (Formdatatype) getSession().merge(
+					detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public void attachDirty(Formdatatype instance) {
+		log.debug("attaching dirty Formdatatype instance");
+		try {
+			getSession().saveOrUpdate(instance);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+
+	public void attachClean(Formdatatype instance) {
+		log.debug("attaching clean Formdatatype instance");
+		try {
+			getSession().buildLockRequest(LockOptions.NONE).lock(instance);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+}
