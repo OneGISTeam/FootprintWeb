@@ -32,6 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		
 		<div role="main" class="ui-content jqm-content" align="center">	
+			<h3>用户列表</h3>
 			<input id="table_data" type="hidden" value="<%=request.getAttribute("usersJsonString") %>" />
 			<table id="table_users" class="table table-border table-bordered table-bg table-hover table-sort" style="width:100%">
 				<thead>

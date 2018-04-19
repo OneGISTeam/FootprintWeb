@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		
 		<div role="main" class="ui-content jqm-content" align="center">				
-			homePage
+			<h3>超级管理员主界面</h3>
 		</div>
 		<!-- 添加pannel，动态链接方式，需要jsp重新编译 -->
 		<jsp:include page="pannel.jsp" flush="true"/>

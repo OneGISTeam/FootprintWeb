@@ -2,7 +2,8 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
-	<constant name="struts.multipart.maxSize" value="5500000000"/>
+	<!-- 设置文件上传最大限制为50M -->
+	<constant name="struts.multipart.maxSize" value="52428800"/>
 	<constant name="struts.devMode" value="true" />
 	<include file="footprintmaster.xml"></include>
 	<include file="footprintuser.xml"></include>

@@ -11,7 +11,6 @@ import java.util.Set;
 public class User implements java.io.Serializable {
 
 	// Fields
-
 	private Integer userid;
 	private Role role;
 	private String name;

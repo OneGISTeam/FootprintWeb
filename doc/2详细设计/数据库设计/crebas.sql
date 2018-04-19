@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/4/4 20:25:28                            */
+/* Created on:     2018/4/17 15:28:26                           */
 /*==============================================================*/
 
 
@@ -56,7 +56,7 @@ create table eventform
    formid               bigint not null,
    objectid             bigint,
    fromtypeid           char(24) not null,
-   data                 blob,
+   data                 mediumblob,
    srsid                char(24) not null,
    primary key (formid)
 )
@@ -139,7 +139,7 @@ create table hierarchy
 )
 charset = UTF8;
 
-alter table hierarchy comment '用户的层级定制表，用于记录用户定制的层级结构，用户每开始一次旅行就需要定制一个层级结构，hierachyid为层级标识，';
+alter table hierarchy comment '用户的层级定制表，用于记录用户定制的层级结构，用户每开始一次旅行就需要定制一个层级结构';
 
 /*==============================================================*/
 /* Table: master                                                */
@@ -213,7 +213,7 @@ create table user
    name                 char(24) not null,
    password             char(64) not null,
    roleid               int not null,
-   portrait             blob,
+   portrait             mediumblob,
    sex                  bool,
    primary key (userid)
 )

@@ -18,5 +18,14 @@
 		<action name="users" class="actions.master.UserManage" method="users">
 			<result name="success" type="dispatcher">/FootprintMaster/Master/userManage.jsp</result>
 		</action>
+		<!-- 访问管理员添加页面，直接跳转 -->
+		<action name="addAdminPage">
+			<result name="success" type="dispatcher">/FootprintMaster/Master/addAdmin.jsp</result>
+		</action>
+		<!-- 添加管理员 -->
+		<action name="addAdmin" class="actions.master.UserManage" method="addAdmin">
+			<result name="success" type="dispatcher">/FootprintMaster/Master/addAdmin.jsp</result>
+			<result name="error" type="dispatcher">error.jsp</result>
+		</action>
 	</package>
 </struts>

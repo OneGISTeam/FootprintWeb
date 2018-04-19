@@ -36,6 +36,8 @@ public class UserInfo extends DaoActionSupport {
 	//文件上传的MIME类型
 	private String portraitContentType;
 	
+	//角色标识，默认为普通用户3
+	private int roleid = 3;
 	
 	public void setName(String name){
 		this.name = name;
@@ -85,13 +87,27 @@ public class UserInfo extends DaoActionSupport {
 		this.portraitContentType = portraitContentType;
 	}
 	
+	public int getRoleid(){
+		return this.getRoleid();
+	}
+	
+	public void setRoleid(int roleid){
+		this.roleid = roleid;
+	}
+	
 	/*
 	 * 用户注册操作
 	 */
 	public String Register() throws Exception{
+		//先设置用户角色类型
+		setRoleid(3);
+		return saveUser();
+	}
+	
+	protected String saveUser() throws Exception{
 		//查询普通用户角色
 		RoleDAO roleDao = new RoleDAO();
-		Role role = roleDao.findById(3);
+		Role role = roleDao.findById(this.roleid);
 		
 		//构造user
 		User user = new User(role, this.name, this.password);

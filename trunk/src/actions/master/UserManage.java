@@ -3,14 +3,13 @@ package actions.master;
 import hibernate.User;
 import hibernate.UserDAO;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import net.sf.json.JSONArray;
+import actions.user.UserInfo;
 import hibernate.converter.ESCTransformer;
 import hibernate.converter.UserListConverter;
 
-public class UserManage extends MasterInfo{
+public class UserManage extends UserInfo{
 
 	/**
 	 * 
@@ -50,4 +49,12 @@ public class UserManage extends MasterInfo{
 		return SUCCESS;
 	}
 	
+	/*
+	 * 添加管理员用户
+	 */
+	public String addAdmin() throws Exception{
+		//设置角色类型为管理员
+		setRoleid(2);
+		return this.saveUser();
+	}
 }

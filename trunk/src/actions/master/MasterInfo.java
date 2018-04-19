@@ -1,5 +1,10 @@
 package actions.master;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.Transaction;
 
 import actions.DaoActionSupport;
@@ -76,16 +81,38 @@ public class MasterInfo extends DaoActionSupport {
 	 * 超级管理员登录
 	 */
 	public String login(){
+		//获取session对象，当session为空时不要创建新的session
+		HttpSession session = ServletActionContext.getRequest().getSession(false);
+		if(session == null){
+			this.setMessage("会话过期，请重新登陆！");
+			return ERROR;
+		}
+		
 		RoleDAO roleDao = new RoleDAO();
 		Role masterRole = roleDao.findById(1);
-		//构造master
-		Master master = new Master(this.getName(), masterRole, this.getPassword());
+		Master master = null;
 		MasterDAO masterDao = new MasterDAO();
+		//如果session中存在name，则说明已登录
+		if(session.getAttribute("name") != null){
+			//从session中取出master的登陆信息
+			String name = (String)session.getAttribute("name");
+			String password = (String)session.getAttribute("password");
+			master = new Master(name, masterRole, password);
+			
+		}else{//如果未登陆，则需要获取从页面传输的登陆信息
+			master = new Master(this.getName(), masterRole, this.getPassword());
+		}
 		
-		if(masterDao.findByExample(master).size() == 0){
+		@SuppressWarnings("unchecked")
+		List<Master> masters = masterDao.findByExample(master);
+		if(masters.size() == 0){
 			this.setMessage("用户名或密码错误！");
 			return ERROR;
-		}else 
+		}else{
+			//将登陆信息存储至session
+			session.setAttribute("name", masters.get(0).getName());
+			session.setAttribute("password", masters.get(0).getPassword());
 			return SUCCESS;
+		}
 	}
 }
